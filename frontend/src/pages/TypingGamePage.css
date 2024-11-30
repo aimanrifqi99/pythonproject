@@ -1,0 +1,172 @@
+.typing-game-wrapper {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Root container for Typing Game */
+.typing-game-container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 2000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;          
+  justify-content: flex-start;   
+}
+
+.typing-game-container h2 {
+  color: #4063ff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: px;
+}
+
+/* Game Info */
+.typing-game-container .game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  color: #ffffff;
+}
+
+.typing-game-container .game-info label,
+.typing-game-container .game-info p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.typing-game-container .game-info select {
+  background-color: #2e2e2e;
+  border: 2px solid #4063ff;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 60px;
+
+}
+
+/* Text to type */
+.typing-game-container .text-to-type {
+  font-family: 'Roboto', sans-serif; 
+  width: 100%;
+  max-width: 2000px;
+  height: 30px;
+  overflow-y: auto;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #2e2e2e;
+  border: 2px solid #4063ff;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+}
+
+/* Typing input box */
+.typing-game-container .typing-input {
+  font-family: 'Roboto', sans-serif; /* Match font with .text-to-type */
+  width: 100%;
+  max-width: 2000px;
+  height: 50px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.5rem; /* Ensure consistent size */
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 2px solid #4063ff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  resize: none;
+  overflow: hidden;
+}
+
+.typing-game-container .typing-input:focus {
+  outline: none;
+  border-color: #5ca3ff;
+}
+
+/* Buttons */
+.typing-game-container button {
+  background-color: #4063ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s;
+}
+
+.typing-game-container button:hover {
+  background-color: #5ca3ff;
+}
+
+.typing-game-container button:disabled {
+  background-color: #888888;
+  cursor: not-allowed;
+}
+
+/* Results Screen */
+.typing-game-container .results-screen {
+  text-align: center;
+}
+
+.typing-game-container .results-screen p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.typing-game-container .back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: 2px solid #4063ff;
+  color: #4063ff;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: 40px;
+}
+
+.typing-game-container .back-button:hover {
+  background-color: #4063ff;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .typing-game-container .game-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .typing-game-container .text-to-type,
+  .typing-game-container .typing-input {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .typing-game-container h2 {
+    font-size: 2rem;
+  }
+
+  .typing-game-container .game-info label,
+  .typing-game-container .game-info p {
+    font-size: 1rem;
+  }
+}
